@@ -1,0 +1,1082 @@
+/*
+    Slider Home
+*/
+//MODAL INICIO
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+//FIN MODAL INICIO
+// CAMPEONATO PESCA
+.placasCoronavirus {
+  height: 600px;
+}
+//Slider
+.carouselExampleIndicators {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.carouselExampleIndicators,
+.carousel-inner,
+.carousel-item,
+.img-slider {
+  height: 100vh;
+}
+
+.img-slider {
+  object-fit: cover;
+}
+
+.img-slider-1 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/1-min.jpg);
+  background-repeat: no-repeat;
+  //background-position: 0 0 50px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.img-slider-2 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/FONDO%201-min.png);
+  background-repeat: no-repeat;
+  //background-position: 0 0 50px 0;
+  background-size: cover;
+  background-position: center
+}
+
+.img-slider-3 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/FONDO%203-min.png);
+  background-repeat: no-repeat;
+  //background-position: 0 0 50px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.img-slider-4 {
+  @include img-slider;
+  background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/4.jpg);
+  background-repeat: no-repeat;
+  //background-position: 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.tituloCarrusel {
+  position: absolute;
+  bottom: 7vh;
+  left: 4vw;
+  width: 450px;
+  height: 160px;
+}
+.tituloCarrusel2 {
+  position: absolute;
+  bottom: 7vh;
+  left: 4vw;
+  width: 370px;
+  height: 155px;
+}
+.tituloCarrusel3 {
+  position: absolute;
+  bottom: 7vh;
+  left: 4vw;
+  width: 395px;
+  height: 155px;
+}
+.tituloCarrusel4 {
+  display: none;
+}
+.slider-home-leyenda {
+  position: absolute;
+  bottom: 4px;
+  left: 12rem;
+  display: none;
+  h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #3d3d3d;
+    font-size: 3em;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: bottom;
+    line-height: 2rem;
+  }
+  span {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #3d3d3d;
+    font-size: 3em;
+  }
+}
+.imagenHome {
+  position: absolute;
+  bottom: 12vh;
+  right: 5vw;
+  img {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .placasCoronavirus {
+    height: 400px;
+  }
+
+  .imagenHome {
+    position: absolute;
+    bottom: 40%;
+    left: 20%;
+    img {
+      width: 500px;
+    }
+  }
+  .slider-home-leyenda {
+    left: 4rem;
+  }
+
+  .campeonatoPesca {
+    height: 120px;
+    .titulo {
+      padding-left: 50px;
+      padding-top: 30px;
+    }
+    .botones {
+      float: none;
+      margin-top: -25px;
+      margin-left: 50px;
+    }
+  }
+  .pngPesca1 {
+    position: absolute;
+    bottom: 2vh;
+    width: 150px;
+    height: 30px;
+  }
+  .pngPesca2 {
+    position: absolute;
+    bottom: 2vh;
+    right: 5px;
+    width: 250px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .placasCoronavirus {
+    height: 300px;
+  }
+
+  .campeonatoPesca {
+    height: 130px;
+    top: -50px;
+    .titulo {
+      font-size: 23px;
+      padding-left: 30px;
+      padding-top: 10px;
+    }
+    .botones {
+      float: none;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+    .boton1 {
+      margin-right: 10px;
+      margin-left: 50px;
+    }
+  }
+
+  .imagenHome {
+    position: absolute;
+    bottom: 45%;
+    left: 17%;
+    img {
+      width: 250px;
+    }
+  }
+  .slider-home-leyenda {
+    //display: none !important;
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  .tituloCarrusel {
+    position: absolute;
+    bottom: 10vh;
+    left: 6vw;
+    width: 337.5px;
+    height: 120px;
+  }
+  .tituloCarrusel2 {
+    position: absolute;
+    bottom: 10vh;
+    left: 6vw;
+    width: 277.5px;
+    height: 110.25px;
+  }
+  .tituloCarrusel3 {
+    position: absolute;
+    bottom: 10vh;
+    left: 6vw;
+    width: 296.25px;
+    height: 110.25px;
+  }
+  .img-slider-1 {
+    @include img-slider;
+    background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/1-min.jpg);
+    background-repeat: no-repeat;
+    //background-position: -300px 0px;
+    background-size: cover;
+    background-position: center
+  }
+
+  .img-slider-2 {
+    @include img-slider;
+    background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/PRIMAVERA1.jpg);
+    background-repeat: no-repeat;
+    //background-position: 0 0 50px 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .img-slider-3 {
+    @include img-slider;
+    background-image: url(http://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/FONDO%203-min.png);
+    background-repeat: no-repeat;
+    //background-position: -600px 0px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tituloCarrusel4 {
+    display: inline;
+    position: absolute;
+    width: 250px;
+    height: 170px;
+    bottom: 30vh;
+    left: 25vw;
+  }
+}
+
+/*
+   inicio nuevo Slider Home
+*/
+.slide-0 {
+  height: 100%;
+}
+.mancha img {
+  position: absolute; /*El div será ubicado con relación a la pantalla*/
+  left: 0px; /*A la derecha deje un espacio de 0px*/
+  right: 0px; /*A la izquierda deje un espacio de 0px*/
+  bottom: 0px; /*Abajo deje un espacio de 0px*/
+  height: 0%; /*alto del div*/
+  width: 100%;
+  min-height: 60px;
+  max-height: 140px;
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* -------------------------------------------------------- reset */
+.cuerpoSlider {
+  width: 100%;
+  //height: 100%;
+  height: 90vh;
+  margin: 0 auto;
+}
+.cuerpoSlider * {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  z-index: 0;
+}
+.cuerpoSlider h1 {
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.cuerpoSlider a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+.cuerpoSlider ul,
+li {
+  list-style: none;
+}
+.cuerpoSlider label {
+  cursor: pointer;
+}
+.cuerpoSlider input {
+  display: none;
+}
+/* -------------------------------------------------------- codepen */
+/* -------------------------------------------------------- slider */
+.sliderHome {
+  //height: 42vw;
+  height: 90vh;
+  overflow: hidden;
+  width: 100%;
+}
+/* -------------------------------------------------------- slide */
+.sliderHome > ul {
+  height: 90vh;
+  z-index: 100;
+}
+
+.sliderHome > ul > li {
+  height: 90vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 2000ms ease;
+  -moz-transition: all 2000ms ease;
+  -ms-transition: all 2000ms ease;
+  -o-transition: all 2000ms ease;
+  transition: all 2000ms ease;
+  //background-position: center;
+}
+.sliderHome > #input-slide-0:checked ~ ul > li.slide-0,
+.sliderHome > #input-slide-1:checked ~ ul > li.slide-1,
+.sliderHome > #input-slide-2:checked ~ ul > li.slide-2,
+.sliderHome > #input-slide-3:checked ~ ul > li.slide-3 {
+  opacity: 1;
+  z-index: 2;
+}
+.sliderHome > ul > li.slide-0 {
+  background-image: url(https://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+.sliderHome > ul > li.slide-1 {
+  background-image: url(https://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+.sliderHome > ul > li.slide-2 {
+  background-image: url(https://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+.sliderHome > ul > li.slide-3 {
+  background-image: url(https://turismo.sanluis.gov.ar/api-turismo/public/recursos/carousel/4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+/* -------------------------------------------------------- arrow */
+.sliderHome > .slider-arrow-prev,
+.sliderHome > .slider-arrow-next {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 300;
+}
+.sliderHome > .slider-arrow-prev > label,
+.sliderHome > .slider-arrow-next > label {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  margin-top: -2.5vw;
+  opacity: 0;
+  background-size: 100% auto;
+  background-position: center;
+
+  z-index: -1;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.sliderHome > #input-slide-0:checked ~ .slider-arrow-prev > label.slide-3,
+.sliderHome > #input-slide-0:checked ~ .slider-arrow-next > label.slide-1,
+.sliderHome > #input-slide-1:checked ~ .slider-arrow-prev > label.slide-0,
+.sliderHome > #input-slide-1:checked ~ .slider-arrow-next > label.slide-2,
+.sliderHome > #input-slide-2:checked ~ .slider-arrow-prev > label.slide-1,
+.sliderHome > #input-slide-2:checked ~ .slider-arrow-next > label.slide-3,
+.sliderHome > #input-slide-3:checked ~ .slider-arrow-prev > label.slide-2,
+.sliderHome > #input-slide-3:checked ~ .slider-arrow-next > label.slide-0 {
+  z-index: 1;
+}
+.sliderHome:hover > .slider-arrow-prev > label,
+.sliderHome:hover > .slider-arrow-next > label {
+  opacity: 1;
+}
+.sliderHome > .slider-arrow-prev > label {
+  left: 5vw;
+  background-image: url();
+}
+.sliderHome > .slider-arrow-next > label {
+  right: 5vw;
+  background-image: url();
+}
+/* -------------------------------------------------------- dot */
+.sliderHome > .slider-dot {
+  position: relative;
+  margin-top: -3.5vw;
+  text-align: center;
+  z-index: 300;
+  font-size: 0;
+}
+.sliderHome > .slider-dot > label {
+  position: relative;
+  display: inline-block;
+  margin: 2vw 0.5vw;
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+  border: #646464 1.5px solid;
+  background-color: #646464;
+}
+.sliderHome > #input-slide-0:checked ~ .slider-dot > label.slide-0,
+.sliderHome > #input-slide-1:checked ~ .slider-dot > label.slide-1,
+.sliderHome > #input-slide-2:checked ~ .slider-dot > label.slide-2,
+.sliderHome > #input-slide-3:checked ~ .slider-dot > label.slide-3 {
+  background-color: #f1f6f8;
+}
+.sliderHome > .slider-dot > label:hover {
+  background-color: #c9c3c3 !important;
+}
+/* -------------------------------------------------------- description */
+.sliderHome > .slide-description {
+  position: absolute;
+  width: 50%;
+  top: calc(50% - 3vw);
+  left: 25%;
+  z-index: 200;
+}
+.sliderHome > .slide-description > label {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: default; 
+
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease;
+  -ms-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
+.sliderHome > #input-slide-0:checked ~ .slide-description > .slide-0,
+.sliderHome > #input-slide-1:checked ~ .slide-description > .slide-1,
+.sliderHome > #input-slide-2:checked ~ .slide-description > .slide-2,
+.sliderHome > #input-slide-3:checked ~ .slide-description > .slide-3 {
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+}
+.sliderHome > .slide-description > label > .text-slide {
+  margin: 0 auto;
+  line-height: 6vw;
+  text-align: center;
+}
+.sliderHome > .slide-description > .slide-0 {
+  font-family: "Raleway", sans-serif;
+}
+.sliderHome > .slide-description > .slide-1 {
+  font-family: "Poiret One", cursive;
+}
+.sliderHome > .slide-description > .slide-2 {
+  font-family: "Monoton", cursive;
+}
+.sliderHome > .slide-description > .slide-3 {
+  font-family: "Audiowide", cursive;
+}
+/* -------------------------------------------------------- autoplay */
+/*
+	if you don't want to autoplay 
+  just check input "slide-0" 
+  instead of input "play" in html code
+  and remove the code below
+*/
+/* -------------------------------------------------------- autoplay slide */
+@-webkit-keyframes slide {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  6%,
+  25% {
+    opacity: 1;
+    z-index: 2;
+  }
+  30%,
+  50% {
+    opacity: 0;
+    z-index: 2;
+  }
+}
+@-moz-keyframes slide {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  6%,
+  24% {
+    opacity: 1;
+    z-index: 2;
+  }
+  30%,
+  50% {
+    opacity: 0;
+    z-index: 2;
+  }
+}
+@-ms-keyframes slide {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  6%,
+  25% {
+    opacity: 1;
+    z-index: 2;
+  }
+  30%,
+  50% {
+    opacity: 0;
+    z-index: 2;
+  }
+}
+@-o-keyframes slide {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  6%,
+  25% {
+    opacity: 1;
+    z-index: 2;
+  }
+  30%,
+  50% {
+    opacity: 0;
+    z-index: 2;
+  }
+}
+@keyframes slide {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  6%,
+  25% {
+    opacity: 1;
+    z-index: 2;
+  }
+  30%,
+  50% {
+    opacity: 0;
+    z-index: 2;
+  }
+}
+.sliderHome > #input-slide-autoplay:checked ~ ul > li.slide-0 {
+  -webkit-animation: slide 32000ms infinite -2000ms linear;
+  -moz-animation: slide 32000ms infinite -2000ms linear;
+  -ms-animation: slide 32000ms infinite -2000ms linear;
+  -o-animation: slide 32000ms infinite -2000ms linear;
+  animation: slide 32000ms infinite -2000ms linear;
+}
+.sliderHome > #input-slide-autoplay:checked ~ ul > li.slide-1 {
+  -webkit-animation: slide 32000ms infinite 6000ms linear;
+  -moz-animation: slide 32000ms infinite 6000ms linear;
+  -ms-animation: slide 32000ms infinite 6000ms linear;
+  -o-animation: slide 32000ms infinite 6000ms linear;
+  animation: slide 32000ms infinite 6000ms linear;
+}
+.sliderHome > #input-slide-autoplay:checked ~ ul > li.slide-2 {
+  -webkit-animation: slide 32000ms infinite 14000ms linear;
+  -moz-animation: slide 32000ms infinite 14000ms linear;
+  -ms-animation: slide 32000ms infinite 14000ms linear;
+  -o-animation: slide 32000ms infinite 14000ms linear;
+  animation: slide 32000ms infinite 14000ms linear;
+}
+.sliderHome > #input-slide-autoplay:checked ~ ul > li.slide-3 {
+  -webkit-animation: slide 32000ms infinite 22000ms linear;
+  -moz-animation: slide 32000ms infinite 22000ms linear;
+  -ms-animation: slide 32000ms infinite 22000ms linear;
+  -o-animation: slide 32000ms infinite 22000ms linear;
+  animation: slide 32000ms infinite 22000ms linear;
+}
+.sliderHome > #input-slide-autoplay:checked ~ ul > li {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+/* -------------------------------------------------------- autoplay arrow */
+@-webkit-keyframes arrow {
+  0%,
+  24% {
+    z-index: 1;
+  }
+  25%,
+  100% {
+    z-index: -1;
+  }
+}
+@-moz-keyframes arrow {
+  0%,
+  24% {
+    z-index: 1;
+  }
+  25%,
+  100% {
+    z-index: -1;
+  }
+}
+@-ms-keyframes arrow {
+  0%,
+  24% {
+    z-index: 1;
+  }
+  25%,
+  100% {
+    z-index: -1;
+  }
+}
+@-o-keyframes arrow {
+  0%,
+  24% {
+    z-index: 1;
+  }
+  25%,
+  100% {
+    z-index: -1;
+  }
+}
+@keyframes arrow {
+  0%,
+  24% {
+    z-index: 1;
+  }
+  25%,
+  100% {
+    z-index: -1;
+  }
+}
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-prev
+  > label.slide-3,
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-next
+  > label.slide-1 {
+  -webkit-animation: arrow 32000ms infinite -2000ms;
+  -moz-animation: arrow 32000ms infinite -2000ms;
+  -ms-animation: arrow 32000ms infinite -2000ms;
+  -o-animation: arrow 32000ms infinite -2000ms;
+  animation: arrow 32000ms infinite -2000ms;
+}
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-prev
+  > label.slide-0,
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-next
+  > label.slide-2 {
+  -webkit-animation: arrow 32000ms infinite 6000ms;
+  -moz-animation: arrow 32000ms infinite 6000ms;
+  -ms-animation: arrow 32000ms infinite 6000ms;
+  -o-animation: arrow 32000ms infinite 6000ms;
+  animation: arrow 32000ms infinite 6000ms;
+}
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-prev
+  > label.slide-1,
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-next
+  > label.slide-3 {
+  -webkit-animation: arrow 32000ms infinite 14000ms;
+  -moz-animation: arrow 32000ms infinite 14000ms;
+  -ms-animation: arrow 32000ms infinite 14000ms;
+  -o-animation: arrow 32000ms infinite 14000ms;
+  animation: arrow 32000ms infinite 14000ms;
+}
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-prev
+  > label.slide-2,
+.sliderHome
+  > #input-slide-autoplay:checked
+  ~ .slider-arrow-next
+  > label.slide-0 {
+  -webkit-animation: arrow 32000ms infinite 22000ms;
+  -moz-animation: arrow 32000ms infinite 22000ms;
+  -ms-animation: arrow 32000ms infinite 22000ms;
+  -o-animation: arrow 32000ms infinite 22000ms;
+  animation: arrow 32000ms infinite 22000ms;
+}
+/* -------------------------------------------------------- autoplay dot */
+@-webkit-keyframes dot {
+  0%,
+  24% {
+    background-color: #f1f6f8;
+  }
+  25%,
+  100% {
+    background: #646464;
+  }
+}
+@-moz-keyframes dot {
+  0%,
+  24% {
+    background-color: #f1f6f8;
+  }
+  25%,
+  100% {
+    background: #646464;
+  }
+}
+@-ms-keyframes dot {
+  0%,
+  24% {
+    background-color: #f1f6f8;
+  }
+  25%,
+  100% {
+    background: #646464;
+  }
+}
+@-o-keyframes dot {
+  0%,
+  24% {
+    background-color: #f1f6f8;
+  }
+  25%,
+  100% {
+    background: #646464;
+  }
+}
+@keyframes dot {
+  0%,
+  24% {
+    background-color: #f1f6f8;
+  }
+  25%,
+  100% {
+    background: #646464;
+  }
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slider-dot > label.slide-0 {
+  -webkit-animation: dot 32000ms infinite -2000ms;
+  -moz-animation: dot 32000ms infinite -2000ms;
+  -ms-animation: dot 32000ms infinite -2000ms;
+  -o-animation: dot 32000ms infinite -2000ms;
+  animation: dot 32000ms infinite -2000ms;
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slider-dot > label.slide-1 {
+  -webkit-animation: dot 32000ms infinite 6000ms;
+  -moz-animation: dot 32000ms infinite 6000ms;
+  -ms-animation: dot 32000ms infinite 6000ms;
+  -o-animation: dot 32000ms infinite 6000ms;
+  animation: dot 32000ms infinite 6000ms;
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slider-dot > label.slide-2 {
+  -webkit-animation: dot 32000ms infinite 14000ms;
+  -moz-animation: dot 32000ms infinite 14000ms;
+  -ms-animation: dot 32000ms infinite 14000ms;
+  -o-animation: dot 32000ms infinite 14000ms;
+  animation: dot 32000ms infinite 14000ms;
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slider-dot > label.slide-3 {
+  -webkit-animation: dot 32000ms infinite 22000ms;
+  -moz-animation: dot 32000ms infinite 22000ms;
+  -ms-animation: dot 32000ms infinite 22000ms;
+  -o-animation: dot 32000ms infinite 22000ms;
+  animation: dot 32000ms infinite 22000ms;
+}
+/* -------------------------------------------------------- autoplay description */
+@-webkit-keyframes description {
+  0%,
+  5% {
+    opacity: 0;
+    z-index: 2;
+    visibility: visible;
+  }
+  6%,
+  24% {
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+  25%,
+  100% {
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+  }
+}
+@-moz-keyframes description {
+  0%,
+  5% {
+    opacity: 0;
+    z-index: 2;
+    visibility: visible;
+  }
+  6%,
+  24% {
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+  25%,
+  100% {
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+  }
+}
+@-ms-keyframes description {
+  0%,
+  5% {
+    opacity: 0;
+    z-index: 2;
+    visibility: visible;
+  }
+  6%,
+  24% {
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+  25%,
+  100% {
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+  }
+}
+@-o-keyframes description {
+  0%,
+  5% {
+    opacity: 0;
+    z-index: 2;
+    visibility: visible;
+  }
+  6%,
+  24% {
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+  25%,
+  100% {
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+  }
+}
+@keyframes description {
+  0%,
+  5% {
+    opacity: 0;
+    z-index: 2;
+    visibility: visible;
+  }
+  6%,
+  24% {
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+  25%,
+  100% {
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+  }
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slide-description > .slide-0 {
+  -webkit-animation: description 32000ms infinite -2000ms ease;
+  -moz-animation: description 32000ms infinite -2000ms ease;
+  -ms-animation: description 32000ms infinite -2000ms ease;
+  -o-animation: description 32000ms infinite -2000ms ease;
+  animation: description 32000ms infinite -2000ms ease;
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slide-description > .slide-1 {
+  -webkit-animation: description 32000ms infinite 6000ms ease;
+  -moz-animation: description 32000ms infinite 6000ms ease;
+  -ms-animation: description 32000ms infinite 6000ms ease;
+  -o-animation: description 32000ms infinite 6000ms ease;
+  animation: description 32000ms infinite 6000ms ease;
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slide-description > .slide-2 {
+  -webkit-animation: description 32000ms infinite 14000ms ease;
+  -moz-animation: description 32000ms infinite 14000ms ease;
+  -ms-animation: description 32000ms infinite 14000ms ease;
+  -o-animation: description 32000ms infinite 14000ms ease;
+  animation: description 32000ms infinite 14000ms ease;
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slide-description > .slide-3 {
+  -webkit-animation: description 32000ms infinite 22000ms ease;
+  -moz-animation: description 32000ms infinite 22000ms ease;
+  -ms-animation: description 32000ms infinite 22000ms ease;
+  -o-animation: description 32000ms infinite 22000ms ease;
+  animation: description 32000ms infinite 22000ms ease;
+}
+.sliderHome > #input-slide-autoplay:checked ~ .slide-description > label {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+/* -------------------------------------------------------- end codepen */
+/* -------------------------------------------------------- footer */
+@media only screen and (max-width: 1300px) {
+  .sliderHome {
+    //height: 60vw;
+  }
+  .sliderHome > ul > li.slide-0 {
+    //background-size: 130%;
+    background-position: 15% 15%;
+  }
+  .sliderHome > ul > li.slide-1 {
+    //background-size: 130%;
+    background-position: 50% 15%;
+  }
+  .sliderHome > ul > li.slide-2 {
+    //background-size: 130%;
+    background-position: 50% 15%;
+  }
+  .sliderHome > ul > li.slide-3 {
+    //background-size: 130%;
+    background-position: 70% 15%;
+  }
+
+  .slider-dot{
+    display: none;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .sliderHome {
+    //height: 83vw;
+  }
+  .sliderHome > ul > li.slide-0 {
+    //background-size: 180%;
+    background-position: 5% 15%;
+  }
+  .sliderHome > ul > li.slide-1 {
+    //background-size: 180%;
+    background-position: 50% 15%;
+  }
+  .sliderHome > ul > li.slide-2 {
+    //background-size: 180%;
+    background-position: 50% 15%;
+  }
+  .sliderHome > ul > li.slide-3 {
+    //background-size: 180%;
+    background-position: 10% 15%;
+  }
+  .mancha img{
+    min-height: 40px;
+  }
+
+  .slider-dot{
+    display: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .sliderHome {
+   // height: 65vw;
+    //overflow: hidden;
+  }
+
+  .sliderHome > ul > li.slide-0 {
+    //background-size: 180%;
+    background-position: 10% 15%;
+  }
+  .sliderHome > ul > li.slide-1 {
+    //background-size: 180%;
+    background-position: 50% 15%;
+  }
+  .sliderHome > ul > li.slide-2 {
+    //background-size: 180%;
+    background-position: 50% 15%;
+  }
+  .sliderHome > ul > li.slide-3 {
+    //background-size: 180%;
+    background-position: 10% 15%;
+  }
+
+  .mancha img{
+    min-height: 30px;
+  }
+  .slider-dot{
+    display: none;
+  }
+}
+
+.MuiSpeedDial-directionUp {
+  float: left;
+  background-color: aqua;
+}
+.MuiSpeedDial-fab {
+  background-color: aqua;
+}
+.MuiButtonBase-root {
+  background-color: black;
+  float: left;
+}

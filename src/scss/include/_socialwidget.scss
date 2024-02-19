@@ -1,0 +1,121 @@
+$theme-color: #e64352;
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($theme-color, 0.9);
+  }
+  75%,
+  100% {
+    box-shadow: 0 0 0 2rem rgba($theme-color, 0);
+  }
+}
+
+.chat-widget {
+  position: absolute;
+  right: 12rem;
+  bottom: 10px;
+  z-index: 100;
+
+  &--button-second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: relative;
+    margin-bottom: 0rem;
+    cursor: pointer;
+    bottom: 4.7rem;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: $theme-color;
+    box-shadow: 0 0 0 -2px rgba(black, 1), 0 2px 4px 0 rgba(black, 0.3);
+
+    transition: opacity 400ms ease, transform 400ms ease;
+    transform: translateY(0rem) scale(1, 1) skew(0deg, 0deg);
+
+    &.-hide {
+      opacity: 0;
+      transform: translateY(3rem) scale(0, 0) skew(0deg, 50deg);
+    }
+
+    &:hover {
+      box-shadow: 0 16px 10px -8px rgba(black, 0.3),
+        0 4px 10px 0 rgba(black, 0.2);
+    }
+
+    /*&::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 50%;
+        animation: pulse 2s ease-in-out 5;  
+      }
+      &::after {
+        animation-delay: 0.5s;
+      }*/
+  }
+
+  &--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+    bottom: -40px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: $theme-color;
+    box-shadow: 0 0 0 -2px rgba(black, 1), 0 2px 4px 0 rgba(black, 0.3);
+    transition: box-shadow 250ms ease;
+    &:hover {
+      box-shadow: 0 16px 10px -8px rgba(black, 0.3),
+        0 4px 10px 0 rgba(black, 0.2);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    &::after {
+      animation-delay: 0.5s;
+    }
+  }
+
+  &--icon {
+    width: 2.5rem;
+    height: auto;
+
+    path {
+      fill: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .chat-widget {
+    display: none;
+  }
+}
+
+.asistentePNG {
+  margin-top: 50px;
+}

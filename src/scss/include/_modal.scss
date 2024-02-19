@@ -1,0 +1,459 @@
+$modal-width-gnrl: 50%;
+$modal-height-gnrl: 95%;
+
+$modal-width-gnrl-mobile: 75%;
+$modal-height-gnrl-mobile: 90%;
+
+#modalMain-container {
+  position: fixed;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 101;
+
+  &.modalIn {
+    transform: scale(1);
+    .modalMain-background {
+      width: 100%;
+      background: rgba(0, 0, 0, 0);
+      animation: fadeInModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      .modalMain {
+        background-color: transparent;
+        animation: modalFadeInModal 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)
+          forwards;
+        img {
+          opacity: 0;
+          position: relative;
+          animation: modalContentFadeInModal 0.5s 1s
+            cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+        .closeModal {
+          i {
+            opacity: 0;
+            position: relative;
+            animation: modalContentFadeInModal 0.5s 1s
+              cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          }
+        }
+        .modalMain-svg {
+          rect {
+            animation: sketchInModal 0.5s 0.3s
+              cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          }
+        }
+      }
+    }
+    &.modalOut {
+      animation: quickScaleDownModal 0s 0.5s linear forwards;
+      .modalMain-background {
+        animation: fadeOutModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        .modalMain {
+          animation: modalFadeOutModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+            forwards;
+          img {
+            animation: modalContentFadeOutModal 0.5s
+              cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          }
+          .closeModal {
+            i {
+              animation: modalContentFadeOutModal 0.5s
+                cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            }
+          }
+          .modalMain-svg {
+            rect {
+              animation: sketchOutModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+                forwards;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modalMain-background {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    vertical-align: middle;
+    .modalMain {
+      background: white;
+      height: $modal-height-gnrl;
+      width: $modal-width-gnrl;
+      display: inline-block;
+      border-radius: 20px;
+      position: relative;
+      top: 2%;
+      .closeModal {
+        z-index: 2;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $color-dos;
+        cursor: pointer;
+        i {
+          font-size: 3rem;
+        }
+      }
+      img {
+        border-radius: 20px;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+      }
+      .modalMain-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        rect {
+          stroke: #fff;
+          stroke-width: 2px;
+          stroke-dasharray: 778;
+          stroke-dashoffset: 778;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInModal {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes fadeOutModal {
+  0% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes scaleDownModal {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) translateY(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes quickScaleDownModal {
+  0% {
+    transform: scale(1);
+  }
+  99.9% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes sketchInModal {
+  0% {
+    stroke-dashoffset: 778;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes sketchOutModal {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 778;
+  }
+}
+
+@keyframes modalFadeInModal {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes modalFadeOutModal {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes modalContentFadeInModal {
+  0% {
+    opacity: 0;
+    top: -20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes modalContentFadeOutModal {
+  0% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -20px;
+  }
+}
+.pantallaGrande {
+  display: inline;
+}
+.pantallaChica {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .pantallaGrande {
+    display: none;
+  }
+  .pantallaChica {
+    display: inline;
+  }
+  #modalMain-container {
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 101;
+
+    &.modalIn {
+      transform: scale(1);
+      .modalMain-background {
+        width: 100%;
+        background: rgba(0, 0, 0, 0);
+        animation: fadeInModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        
+        .modalMain {
+          background-color: transparent;
+          animation: modalFadeInModal 0.5s 0.8s
+            cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+ 
+          img {
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            position: relative;
+            animation: modalContentFadeInModal 0.5s 1s
+              cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+          }
+          .closeModal {
+            i {
+              opacity: 0;
+              position: relative;
+              animation: modalContentFadeInModal 0.5s 1s
+                cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            }
+          }
+          .modalMain-svg {
+            rect {
+              animation: sketchInModal 0.5s 0.3s
+                cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            }
+          }
+        }
+      }
+      &.modalOut {
+        animation: quickScaleDownModal 0s 0.5s linear forwards;
+        .modalMain-background {
+
+          animation: fadeOutModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+            forwards;
+          .modalMain {
+            height: 90%; 
+
+            animation: modalFadeOutModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+              forwards;
+            img {
+              animation: modalContentFadeOutModal 0.5s
+                cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            }
+            .closeModal {
+              i {
+                animation: modalContentFadeOutModal 0.5s
+                  cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+              }
+            }
+            .modalMain-svg {
+              rect {
+                animation: sketchOutModal 0.5s
+                  cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .modalMain-background {
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      vertical-align: middle;
+      .modalMain {
+        background: white;
+        height: $modal-height-gnrl-mobile;
+        width: $modal-width-gnrl-mobile;
+        display: inline-block;
+        border-radius: 20px;
+        position: relative;
+        top: 2%;
+        .closeModal {
+          z-index: 2;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: $color-dos;
+          cursor: pointer;
+          i {
+            font-size: 3rem;
+          }
+        }
+        img {
+          border-radius: 20px;
+          z-index: 1;
+          height: 100%;
+          width: 100%;
+        }
+        .modalMain-svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          rect {
+            stroke: #fff;
+            stroke-width: 2px;
+            stroke-dasharray: 778;
+            stroke-dashoffset: 778;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fadeInModal {
+    0% {
+      background: rgba(0, 0, 0, 0);
+    }
+    100% {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  @keyframes fadeOutModal {
+    0% {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    100% {
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+
+  @keyframes scaleDownModal {
+    0% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.8) translateY(1000px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes quickScaleDownModal {
+    0% {
+      transform: scale(1);
+    }
+    99.9% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes sketchInModal {
+    0% {
+      stroke-dashoffset: 778;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes sketchOutModal {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 778;
+    }
+  }
+
+  @keyframes modalFadeInModal {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: white;
+    }
+  }
+
+  @keyframes modalFadeOutModal {
+    0% {
+      background-color: white;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+
+  @keyframes modalContentFadeInModal {
+    0% {
+      opacity: 0;
+      top: -20px;
+    }
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  @keyframes modalContentFadeOutModal {
+    0% {
+      opacity: 1;
+      top: 0px;
+    }
+    100% {
+      opacity: 0;
+      top: -20px;
+    }
+  }
+}

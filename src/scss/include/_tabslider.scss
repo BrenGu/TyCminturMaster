@@ -1,0 +1,490 @@
+/* COMIENZA ESTILO DE TABS SLIDER*/
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400";
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$ultra: 800;
+
+// Colors
+$black: #000000;
+$white: #ffffff;
+
+// Material Colors
+$dark-theme: (
+  primary: rgba($black, 0.87),
+  secondary: rgba($black, 0.54),
+  disabled: rgba($black, 0.26),
+);
+$light-theme: (
+  primary: rgba($white, 1),
+  secondary: rgba($white, 0.7),
+  disabled: rgba($white, 0.3),
+);
+
+// Pen Colors
+$accent: rgba(237, 15, 104, 1);
+
+// Base Setting
+$base-color: map-get($dark-theme, primary);
+$base-font-size: 14px;
+$base-font-weight: $regular;
+$base-line-height: 1.5em;
+
+// Layout Settings
+$max-width: null;
+$columns: null;
+$gutters: null;
+
+/* colors */
+$blue: rgba(237, 15, 104, 1);
+$red: #ff4a53;
+$dark: #333;
+
+$accent: $blue;
+$accent-inactive: desaturate($accent, 85%);
+$secondary: $accent-inactive;
+
+/* tab setting */
+$tab-count: 3;
+$indicator-width: 50px;
+$indicator-height: 4px;
+
+/* breakpoints */
+$breakpoints: (
+  medium: #{$tab-count * 250px},
+  small: #{$tab-count * 150px},
+);
+
+/* selectors relative to radio inputs */
+$label-selector: "~ ul > li";
+$slider-selector: "~ .slider";
+$content-selector: "~ .content > section";
+
+@mixin tabs(
+  $label-selector: $label-selector,
+  $slider-selector: $slider-selector,
+  $content-selector: $content-selector
+) {
+  @for $i from 1 through $tab-count {
+    &:nth-of-type(#{$i}):checked {
+      #{$label-selector}:nth-child(#{$i}) {
+        @content;
+      }
+
+      #{$slider-selector} {
+        transform: translateX(#{100% * ($i - 1)});
+      }
+
+      #{$content-selector}:nth-child(#{$i}) {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes ripples {
+  0% {
+    box-shadow: 0 0 0 0 rgba($white, 0.1), 0 0 0 20px rgba($white, 0.1),
+      0 0 0 40px rgba($white, 0.1), 0 0 0 60px rgba($white, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba($white, 0.1), 0 0 0 40px rgba($white, 0.1),
+      0 0 0 60px rgba($white, 0.1), 0 0 0 80px rgba($white, 0);
+  }
+}
+
+.tabs {
+  font-family: "Raleway";
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  background: white;
+  padding: 50px;
+  padding-bottom: 40px;
+  width: 70%;
+  height: 250px auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+  min-width: #{$tab-count * 60px};
+  input[name="tab-control"] {
+    display: none;
+  }
+
+  .content section h2,
+  ul li label {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 18px;
+    color: $accent;
+  }
+
+  .listatabslider {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    li {
+      box-sizing: border-box;
+      flex: 1;
+      width: #{100% / $tab-count};
+      padding: 0 10px;
+      text-align: center;
+
+      label {
+        transition: all 0.3s ease-in-out;
+        color: $secondary;
+        padding: 5px auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        white-space: nowrap;
+        -webkit-touch-callout: none;
+        user-select: none;
+
+        br {
+          display: none;
+        }
+
+        svg {
+          fill: $secondary;
+          height: 1.2em;
+          vertical-align: bottom;
+          margin-right: 0.2em;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: 0;
+          color: lighten($secondary, 15%);
+          svg {
+            fill: lighten($secondary, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  .slider {
+    position: relative;
+    width: #{100% / $tab-count};
+    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+    .indicator {
+      position: relative;
+      width: $indicator-width;
+      max-width: 100%;
+      margin: 0 auto;
+      height: $indicator-height;
+      background: $accent;
+      border-radius: 1px;
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+
+    section {
+      display: none;
+      animation: {
+        name: content;
+        direction: normal;
+        duration: 0.3s;
+        timing-function: ease-in-out;
+        iteration-count: 1;
+      }
+      line-height: 1.4;
+
+      .btnavion {
+        position: relative;
+        left: 70%;
+        bottom: 5%;
+        outline: 0;
+        width: 215px;
+        display: inline-flex;
+        align-items: center;
+        @media only screen and (max-width: 960px) {
+          left: 60%;
+        }
+        @media only screen and (max-width: 755px) {
+          left: 50%;
+        }
+        @media only screen and (max-width: 625px) {
+          left: 40%;
+        }
+        @media only screen and (max-width: 549px) {
+          left: 0;
+          right: 5%;
+        }
+        @media only screen and (max-width: 383px) {
+          width: 190px;
+        }
+        background: $accent;
+        min-width: 160px;
+        height: 50px;
+        margin: 10px 0 0 0;
+        border: 0;
+        border-radius: 40px;
+        box-shadow: 0 4px 12px rgba($black, 0.1);
+        box-sizing: border-box;
+        padding: 16px 20px;
+        color: $white;
+        font-size: 12px;
+        font-weight: $semibold;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:focus,
+        &:active {
+          .dropdown {
+            transform: translate(0, 20px);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        .material-icons {
+          margin-left: 15px;
+          font-size: 25px;
+          border-radius: 100%;
+          animation: ripples 0.6s linear infinite;
+        }
+      }
+      .container-btnsavion {
+        text-align: center;
+        align-content: center;
+        .btnavion-conoce {
+          position: relative;
+          bottom: 5%;
+          outline: 0;
+          width: 190px;
+          display: inline-flex;
+          align-items: center;
+          background: $accent;
+          height: 50px;
+          border: 0;
+          border-radius: 40px;
+          box-shadow: 0 4px 12px rgba($black, 0.1);
+          box-sizing: border-box;
+          padding: 16px 20px;
+          margin: 10px 0 0 6px;
+          color: $white;
+          font-size: 10.7px;
+          font-weight: $semibold;
+          letter-spacing: 1.1px;
+          text-transform: uppercase;
+          cursor: pointer;
+
+          &:focus,
+          &:active {
+            .dropdown {
+              transform: translate(0, 20px);
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+
+          .material-icons {
+            margin-left: 15px;
+            font-size: 25px;
+            border-radius: 100%;
+            animation: ripples 0.6s linear infinite;
+          }
+        }
+      }
+
+      h2 {
+        color: $accent;
+        display: none;
+        &::after {
+          content: "";
+          position: relative;
+          display: block;
+          width: 30px;
+          height: 3px;
+          background: $accent;
+          margin-top: 5px;
+          left: 1px;
+        }
+      }
+    }
+  }
+
+  input[name="tab-control"] {
+    @include tabs {
+      > label {
+        cursor: default;
+        color: $accent;
+
+        svg {
+          fill: $accent;
+        }
+
+        @media (max-width: map-get($breakpoints, small)) {
+          background: rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+  }
+
+  @keyframes content {
+    from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, medium)) {
+    .listatabslider li label {
+      white-space: initial;
+
+      br {
+        display: initial;
+      }
+
+      svg {
+        height: 1.5em;
+      }
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, small)) {
+    .listatabslider li label {
+      padding: 5px;
+      border-radius: 5px;
+
+      span {
+        display: none;
+      }
+    }
+
+    .slider {
+      display: none;
+    }
+
+    .content {
+      margin-top: 20px;
+      section h2 {
+        display: block;
+      }
+    }
+  }
+}
+
+// CSS BOTON
+
+// Font Weights
+
+// Elevation
+@mixin elevation($level) {
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* Body */
+
+//PRUEBA AVION*/}
+
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+$f-primary: "Josefin Sans", sans-serif;
+$f-secondary: "Roboto", cursive;
+$c-front: #1d1f20;
+$c-back: #1d1f20;
+$c-back-light: #383838;
+$c-hilight: rgba(237, 15, 104, 1);
+$s-footer-height: 3rem;
+
+%boxShadow {
+  box-shadow: 0 0 10rem 0 #000000;
+}
+%boxShadow--in {
+  box-shadow: 0 0 10rem 0 #000000 inset;
+}
+
+.avion {
+  width: 100%;
+  height: 100%;
+}
+.avion {
+  @extend %boxShadow--in;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: $s-footer-height;
+  background-color: $c-back;
+  color: $c-front;
+  font-family: $f-primary;
+  font-size: 10px;
+  font-weight: 100;
+  box-shadow: 0 0 10rem 0 #000000 inset;
+}
+a {
+  text-decoration: none;
+  color: $c-hilight;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
+.svg-calLoader {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  transform-origin: 115px 115px;
+  animation: 1.4s linear infinite loader-spin;
+}
+
+.cal-loader__plane {
+  fill: $c-hilight;
+}
+.cal-loader__path {
+  stroke: $c-front;
+  animation: 1.4s ease-in-out infinite loader-path;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-path {
+  0% {
+    stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+  }
+  50% {
+    stroke-dasharray: 0, 450, 10, 30, 10, 30, 10, 30, 10;
+  }
+  100% {
+    stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+  }
+}

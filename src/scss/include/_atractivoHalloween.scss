@@ -1,0 +1,181 @@
+/*
+    Componente PAtractivo.js
+*/
+.Atractivo-main-halloween{
+    background-image: url($server_path+"recursos/halloween/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .row{
+        margin-right: 0;
+    }
+
+    .Titulo-Halloween {
+        position: relative;
+        margin: 50px 0 50px 0;
+        text-align: left;
+        left: 10%;
+        width: fit-content;
+        font-size: 7rem;
+        line-height: 80px;
+        font-family: "Jolly Lodger";
+        color: rgb(28, 228, 45);
+    }
+
+    .Container-Logo-Halloween{
+        margin-top: 30px;
+        width: 100%;
+        text-align: left;
+        padding-left: 10%;
+    
+        img {
+            margin-top: 10%;
+            margin-bottom: 10%;
+            width: 300px;
+            height: 100px;
+        }
+    }
+
+    a {
+        color: white;
+    }
+
+    .ZonaLocalidad-titulo-Halloween{
+        display: block;
+        width: 100%;
+        top: 50px;
+        height: 50px;
+        position: relative;
+        margin-bottom: 90px;
+
+        h3 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #fff;
+            text-transform: uppercase;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+    }
+}
+
+.Atractivo-data-halloween {
+    
+    display: grid;
+    grid-template-areas: "atractivo-texto atractivo-fotos" "atractivo-ubicacion atractivo-info";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    .atractivo-texto {
+        grid-area: atractivo-texto;
+        color: blanchedalmond;
+       
+    }
+
+    .atractivo-fotos {
+        grid-area: atractivo-fotos;
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        //background-color:black;
+        padding: 20px 20px;
+        
+        img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            margin: 0 8px 0 8px;
+            border: 1px solid #fff;
+        }
+    }
+
+    .atractivo-ubicacion {
+        grid-area: atractivo-ubicacion;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color:blanchedalmond;
+        
+        span {
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            i {
+                margin-right: 8px;
+                color: blanchedalmond;
+            }
+        }
+    }
+    .atractivo-info {
+        grid-area: atractivo-info;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        //background-color:black;
+        color: blanchedalmond;
+        padding-left: 20px;
+        span {
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            i {
+                margin-right: 8px;
+                color: blanchedalmond;
+            }
+        }
+        ul {
+            li {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .ZonaLocalidad-titulo-Halloween {
+        h3 {
+            font-size: 1rem;
+            
+        }
+    }
+    .Atractivo-data-halloween {
+        grid-template-areas: "atractivo-fotos" "atractivo-texto" "atractivo-ubicacion" "atractivo-info";
+        grid-template-columns: 1fr;
+        padding: 8px 2px;
+        .atractivo-fotos {
+            padding: 8px;
+            img {
+                width: 100%;
+                height: auto;
+                //max-height: 200px;
+                //padding: 0px 0px 8px 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Atractivo-main-halloween{
+        .Titulo-Halloween {
+            text-align: center;
+            margin-left: 15%;
+            font-size: 5rem;
+        }
+
+        .Container-Logo-Halloween {
+            width: 100%;
+            left: 0;
+            text-align: center;
+            
+            img {
+                margin-top: 10%;
+                margin-bottom: 10%;
+                width: 200px;
+                height: 80px;
+            }
+        }
+    }
+}

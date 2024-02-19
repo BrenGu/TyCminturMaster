@@ -1,0 +1,107 @@
+
+.newsletter {
+    display:-webkit-flex;
+    display:-ms-flex;
+    align-items: center;
+    justify-content: center;
+    width: 295px;
+    z-index: 99;
+    position: fixed; /* Fixed/sticky position */
+    -webkit-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    bottom: 15px; /* Place the button at the bottom of the page */
+    left: 10px;
+    background-color: white;
+    border-radius: 9px;
+    padding: 5px 20px ;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    
+    .newsletterFullBody{    
+        margin:0px auto;
+        width: 100%;
+        .newsHeader{
+            padding-top: 5px;
+            .buttonX{
+                position: absolute;  
+                right: 5px;
+                top:    4px;   
+                 }
+            .newsTitle{
+                color:rgba(60,103,164, 1);
+                font-size: 1.0em;
+            }
+           
+        }
+    
+        .newsEmail{
+            border-radius: 15px;
+            border: solid lightgray;
+            width: 100%;
+            height: 40px;        
+            &:focus{
+                outline-color: darkgray;
+            }
+        }
+    
+        .newsMsg {
+            width: 90%;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            text-align: center;
+            &:disabled{
+                @include degrado(0.6, 0.7);
+                background-color: rgba(237,15,104, 1);
+                color: white;
+            }
+        }
+    
+        .newsFooterButton {
+            width: 100%; 
+            height: 40px; 
+            border-radius: 15px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: rgba(114,39,137, 1);
+            color: white;
+            &:hover{
+                outline: none;
+                background-color: rgb(127, 62, 146);
+            }
+        }
+    }
+}
+.PDesuscribir {
+    padding-top: 160px;
+    padding-bottom: 100px;
+    text-align: center;
+    .DesEmail{
+        border-radius: 5px;
+        border: solid lightgray;
+        width: 60%;
+        margin-top: 40px;
+        height: 40px;       
+        &:focus{
+            outline-color: darkgray;
+        }
+    }
+    .DesConfirm{
+        width: 60%; 
+        height: 40px; 
+        border-radius: 5px;
+        margin-top: 40px;
+        border: none;
+        background-color: rgba(114,39,137, 1);
+        color: white;
+        &:hover{
+            outline: none;
+            background-color: rgb(127, 62, 146);
+        }
+    }
+    .DesMsg{
+        color: rgba(237,15,104, 1);
+    }
+    
+}

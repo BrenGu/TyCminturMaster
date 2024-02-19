@@ -1,0 +1,142 @@
+.logoParques {
+  width: 200px;
+}
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgActividades {
+  width: 50%;
+}
+
+//---------color---------
+$black: #eeeeee;
+$white: #eeeeee;
+$green: #4ecca3;
+$blue: #93deff;
+$yellow: #feeb97;
+
+.GridImageMain {
+  padding-top: 100px;
+  background-color: $black;
+  text-align: center;
+}
+
+.GridImageTitle {
+  position: relative;
+  margin-left: 20%;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 700;
+  width: 60%;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 0 0 10px;
+  text-transform: uppercase;
+  background-color: $white;
+  h2 {
+    color: $black;
+  }
+}
+
+.GridImageBody {
+  padding: 40px 0 40px 40px;
+  overflow: hidden;
+  @include flexcenter();
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.item {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+
+  &.row2 {
+    grid-row: span 2;
+  }
+  &.row3 {
+    grid-row: span 3;
+  }
+  &.row4 {
+    grid-row: span 4;
+  }
+  &.col2 {
+    grid-column: span 2;
+  }
+  &.col3 {
+    grid-column: span 3;
+  }
+  &.col4 {
+    grid-column: span 4;
+  }
+  img {
+    grid-column: 1 / -1;
+    width: 100%;
+    grid-row: 1 / -1;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:hover {
+    .item__overlay {
+      transform: translateY(0%);
+    }
+  }
+}
+.item__overlay {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1);
+  button {
+    background: none;
+    border: 2px solid $white;
+    color: $white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 2.5px 10px;
+    outline: none;
+  }
+}
+
+.pantallaGrandeGrid {
+  display: inline;
+}
+.pantallaChicaGrid {
+  display: none;
+}
+
+@media only screen and (max-width: 510px) { 
+  .logoParques {
+    width: 350px;
+  }
+  .pantallaGrandeGrid {  
+    display: inline;
+    padding-left: 10px;
+  }
+  .pantallaGrandeGrid h5 {
+    padding-top: 70px;
+  }
+  .imgActividades {
+    width: 70%;
+  }
+  .pantallaChicaGrid {
+    display: none;
+  }
+}

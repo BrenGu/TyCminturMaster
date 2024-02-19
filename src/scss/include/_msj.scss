@@ -1,0 +1,28 @@
+
+
+.contenido{
+    margin-top: 5rem;
+    border: 2px solid rgba(114, 39, 137, 1);
+}
+
+.cabecera h5  {
+    color: rgba(68, 138, 180, 1);
+}
+
+.cabecera .close{
+    margin: -1.5rem -1rem ;
+}
+
+.cuerpo{
+    background-color: transparent;
+    padding: 1.5rem;
+}
+
+.btn-msj{
+    background: linear-gradient(
+        to right,
+        #722789 0%,
+        rgba(237, 15, 104, 0.8) 100%
+      );
+      border-color:#722789;
+}

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt");
+
+.player {
+  width: 100%;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  //background-color: #212527;
+
+  .song {
+    user-select: none;
+    margin: 0 20px;
+    .song__title {
+      text-align: left;
+      margin: 0;
+      color: rgb(28, 228, 45);
+      font-family: "Jolly Lodger";
+      font-weight: normal;
+      font-size: 4em;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .song__artist {
+      margin: 0;
+      color: white;
+      font-family: "Rock Salt", cursive;
+      font-weight: normal;
+      font-size: 1em;
+
+      &:hover {
+        color: greenyellow;
+      }
+    }
+  }
+
+  .controls {
+    flex-grow: 1;
+    margin: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .player__button {
+    width: fit-content;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      i {
+        color: white;
+      }
+    }
+
+    i {
+      font-size: 3.5em;
+      color: rgb(28, 228, 45);
+    }
+  }
+
+  .bar {
+    user-select: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .bar__time {
+      color: white;
+      font-size: 16px;
+    }
+
+    .bar__progress {
+      flex: 1;
+      border-radius: 5px;
+      margin: 0 20px;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .bar__progress__knob {
+        position: relative;
+        height: 16px;
+        width: 16px;
+        bottom: 0px;
+        border: 1.5px solid white;
+        border-radius: 50%;
+        background-color: rgb(22, 172, 34);
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+
+    .controls {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .bar {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .song {
+      .song__title {
+        font-size: 2.5em;
+      }
+
+      .song__artist {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

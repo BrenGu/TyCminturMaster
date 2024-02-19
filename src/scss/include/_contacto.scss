@@ -1,0 +1,179 @@
+/*
+    Componente PContacto.js
+*/
+
+.grillaContacto-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". ." ". .";
+}
+.datos-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "icono titulo" "icono dato";
+  color: #722789;
+}
+.contacLlamada {
+  color: #722789;
+  i {
+    font-size: 50px;
+    padding-top: 10px;
+    position: absolute;
+  }
+  padding-top: 10px;
+  h4 {
+    padding-left: 70px;
+  }
+  h5 {
+    a {
+      color: #5c7080;
+      line-height: 1.9rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.posicionContacto {
+  padding-left: 150px;
+}
+
+@media only screen and (max-width: 880px) {
+  .grillaContacto-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "." "." "." ".";
+  }
+
+  .posicionContacto {
+    padding-left: 0px;
+  }
+}
+
+.service a {
+  color: #5b7abb;
+  display: block;
+}
+
+.service h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.services-grid {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.service {
+  background: #fff;
+  margin: 2px;
+  padding: 20px;
+  margin-bottom: 150px;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  height: 350px;
+  flex: 1;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e7e7e7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service i {
+  font-size: 3.45rem;
+  margin: 1rem 0;
+}
+
+.service1 i,
+.service1 h5,
+.service1 .cta {
+  color: #000000;
+}
+
+.service1:hover {
+  border: 6px solid #000000;
+}
+
+.service2 i,
+.service2 .cta { 
+  color: #57207b;
+}
+
+.service2:hover {
+  border: 6px solid #57207b;
+}
+
+.service3 i,
+.service3 h5,
+.service3 .cta {
+  color: #fe660d;
+}
+
+.service3:hover {
+  border: 6px solid #fe6123;
+}
+
+.service4 i,
+.service4 h5,
+.service4 .cta {
+  color: #65a0c9;
+}
+
+.service4:hover {
+  border: 6px solid #65a0c9;
+}
+
+.service .cta span {
+  font-size: 0.6rem;
+}
+
+.service > * {
+  flex: 1 1 100%;
+}
+
+.service .cta {
+  align-self: flex-end;
+}
+
+@media all and (max-width: 900px) {
+  .services-grid {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .service {
+    margin-bottom: 10px;
+  }
+}
+.contacRedes {
+  color: #722789;
+  i {
+    font-size: 1rem;
+  }
+
+  .iconRedes {
+    i {
+      font-size: 30px;
+    }
+  }
+}

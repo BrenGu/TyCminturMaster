@@ -1,0 +1,167 @@
+//sass --watch src/scss/App.scss:src/App.css
+@import "include/config";
+@import "include/colors";
+@import "include/mixins";
+@import "include/init";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+//Class Viewer
+@import "include/audios";
+@import "include/cardHalloween";
+@import "include/viewer";
+@import "include/gridImages";
+@import "include/weatherCard";
+@import "include/socialwidget";
+@import "include/cardimperdibles";
+@import "include/estadisticas";
+//Componente Menu.js
+@import "include/menu";
+
+//Sub Componente ZonaMenu
+@import "include/zonas_menu";
+//Modal Home
+@import "include/modal";
+//Componente Producto.js
+@import "include/producto";
+//Slider Home
+@import "include/slider_home";
+//Slider Actividades
+@import "include/sliderActividades";
+//Mapas
+@import "include/mapas";
+//Componente Recorridos.js
+@import "include/recorridos";
+//Componente Descarga.js
+@import "include/descarga";
+@import "include/slider";
+//Componente EventoForm.js
+@import "include/eventoform";
+//Componente PEventos.js
+@import "include/eventos";
+//Componente PEvento.js
+@import "include/evento";
+//Componente PNovedad.js
+@import "include/novedad";
+//Componente Novedades.js
+@import "include/novedades";
+//Componente Novedadesfull.js
+@import "include/novedadesfull";
+//Componente Arbolesfull.js
+@import "include/arbolesfull";
+//Componente PArbol.js
+@import "include/arbol";
+//Componente GaleriaLocalidades.js
+@import "include/galeriaLocalidades";
+//Componente PZona.js
+@import "include/zonadetalles";
+//Componente PLocalidad.js
+@import "include/localidaddetalles";
+//Componente PAtractivo.js
+@import "include/atractivo";
+//Componente atractivoHalloween
+@import "include/atractivoHalloween";
+//Componente PListadoAtractivos
+@import "include/listadoatractivos";
+//Componente Alojamientos
+@import "include/alojamientos";
+//Componente PAlojamiento
+@import "include/alojamiento";
+//Componente PContacto
+@import "include/contacto";
+//Componente censistas
+@import "include/censistas";
+
+@import "include/tabslider";
+
+@import "include/home";
+
+@import "include/newsletter";
+
+//Componente Footer.js
+@import "include/footer";
+
+//MasonryGallery.js
+@import "include/masonryGallery";
+
+//Navbar
+//@import "include/navbar";
+//Plataforma de curso de gastronomia
+@import "include/gustosSanLuis";
+//LoginForm
+@import 'include/loginForm';
+//Mensaje "Msg"
+@import "include/msj";
+
+
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 880px) {
+  .menu {
+    padding: 0 1rem;
+    ul {
+      li {
+        a {
+          margin-right: 10px;
+        }
+      }
+    }
+    .logo {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  .menu-leyenda {
+    position: absolute;
+    bottom: 5rem;
+    left: 12rem;
+
+    h1 {
+      font-size: 3em;
+    }
+    span {
+      font-size: 3em;
+      //margin-top: -20px;
+    }
+  }
+}
+
+.div-zona {
+  max-width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  .div-zona-img {
+    width: 128px;
+    height: 128px;
+  }
+  .div-zona-title {
+  }
+}
+
+.archivosApp {
+  h4 {
+    margin: 15px;
+  }
+  img {
+    width: 80%;
+    height: 12%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .archivosApp {
+    h4 {
+      margin: 15px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

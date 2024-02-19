@@ -1,0 +1,520 @@
+/*NUEVO COMPONENTE DE DESCARGA DE MAPAS*/
+
+.btn-lg,
+a:focus,
+a:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.card-1 {
+  box-shadow: 2px 4px 15px 0px #d0166f;
+  width: 60%;
+  height: 90%;
+  margin-bottom: 5%;
+}
+
+.small {
+  font-size: 9px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn-round-lg {
+  border-radius: 22.5px;
+  background-color: #ab1e7a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  padding: 8px 20px 8px 20px !important;
+  border: 1px solid #fff;
+}
+
+.btn-round-lg:hover {
+  background-color: $color-uno;
+  color: $color-dos;
+  border: 1px solid #fff;
+}
+
+.btn-round-lg:focus {
+  border: 1px solid #fff !important;
+}
+
+.card {
+  background-color: transparent !important;
+  border: 0px solid #ab1e7a;
+
+  border-radius: 22.5px;
+}
+.mapasTitle {
+  color: #ab1e7a;
+  text-transform: uppercase;
+}
+
+.TituloMapas {
+  text-transform: uppercase;
+  color: #ab1e7a;
+}
+/*
+    Componente Descarga App
+*/
+.registro1 {
+  display: none;
+}
+.archivosApp {
+  background-color: $color-dos;
+  @include degrado2(0.95, 0.8);
+  .pruebaApp {
+    width: 550px;
+    height: 400px;
+  }
+  .botonDescarga {
+    width: 300px;
+    height: 100px;
+  }
+  .flechaAbajo {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 50px;
+  }
+  .asistente {
+    width: 450px;
+    height: 750px;
+    margin-bottom: 70px;
+  }
+  .banner {
+    width: 500px;
+    height: 800px;
+    float: left;
+    padding-bottom: 50px;
+    padding-left: 150px;
+  }
+  .folleto {
+    padding-left: 100px;
+    width: 850px;
+    height: 650px;
+    margin-bottom: 20px;
+  }
+}
+
+.Descarga {
+  //background-image: url($server_path + "");
+  background-color: $color-dos;
+  @include degrado2(0.95, 0.8);
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  img {
+    width: 300px;
+  }
+  .descarga-leyenda {
+    padding-left: 6%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    .descarga-titulos {
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      word-break: keep-all;
+      .dt-1 {
+        text-transform: uppercase;
+        @include text-sh(1px, 1px, 2px, #000);
+        letter-spacing: 0.3rem;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        margin-bottom: 3px;
+        font-weight: 100;
+      }
+      .dt-2 {
+        text-transform: uppercase;
+        @include text-sh(2px, 2px, 5px, #000);
+        letter-spacing: 0.08rem;
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 3px;
+        font-weight: 800;
+      }
+      .dt-3 {
+        text-transform: lowercase;
+        @include text-sh(2px, 2px, 5px, #000);
+        letter-spacing: 0.5rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        font-weight: 800;
+      }
+    }
+  }
+  .descarga-icono {
+    i {
+      font-size: 2rem;
+      margin-left: 40px;
+      @include text-sh(2px, 2px, 5px, #000);
+    }
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .registro1 {
+    display: inline;
+  }
+  .registro2 {
+    display: none;
+  }
+  .archivosApp {
+    .pruebaApp {
+      width: 450px;
+      height: 300px;
+    }
+    .botonDescarga {
+      width: 300px;
+      height: 100px;
+    }
+    .flechaAbajo {
+      width: 100px;
+      height: 100px;
+      padding-bottom: 50px;
+    }
+    .asistente {
+      width: 450px;
+      height: 750px;
+      margin-bottom: 70px;
+    }
+    .banner {
+      width: 500px;
+      height: 800px;
+      float: left;
+      padding-bottom: 50px;
+      padding-left: 150px;
+    }
+    .folleto {
+      padding-left: 0;
+      width: 450px;
+      height: 350px;
+    }
+  }
+
+  .Descarga {
+    margin-top: 160px;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    img {
+      //width: 300px;
+      margin-top: -140px;
+    }
+    .descarga-leyenda {
+      flex-direction: column;
+    }
+    .descarga-icono {
+      i {
+        margin: 30px 0px 0px 0px;
+      }
+    }
+
+    .contenedorAnimacion {
+      margin: -5% 0 6% 0;
+    }
+  }
+  .imgMapas {
+    width: 70%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card-1 {
+    width: 90%;
+  }
+  .archivosApp {
+    .pruebaApp {
+      width: 350px;
+      height: 250px;
+    }
+    .botonDescarga {
+      width: 300px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      height: 90px;
+    }
+    .flechaAbajo {
+      width: 100px;
+      height: 100px;
+      padding-bottom: 50px;
+    }
+    .asistente {
+      width: 300px;
+      height: 500px;
+      margin-bottom: 70px;
+    }
+    .banner {
+      width: 300px;
+      height: 800px;
+      float: left;
+      padding-bottom: 50px;
+      padding-left: 0px;
+      margin-left: 50px;
+    }
+    .folleto {
+      padding-left: 0;
+      width: 350px;
+      height: 400px;
+    }
+  }
+
+  .Descarga {
+    margin-bottom: 40px;
+    .descarga-leyenda {
+      .descarga-titulos {
+        text-align: center;
+        .dt-1 {
+          text-transform: uppercase;
+          @include text-sh(1px, 1px, 2px, #000);
+          letter-spacing: auto;
+          font-size: 2rem;
+          line-height: 2rem;
+          margin-bottom: 3px;
+          font-weight: 100;
+        }
+        .dt-2 {
+          text-transform: uppercase;
+          @include text-sh(2px, 2px, 5px, #000);
+          letter-spacing: 0.08rem;
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          margin-bottom: 3px;
+          font-weight: 800;
+        }
+        .dt-3 {
+          text-transform: lowercase;
+          @include text-sh(2px, 2px, 5px, #000);
+          letter-spacing: 0.5rem;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          font-weight: 800;
+        }
+      }
+    }
+    .contenedorAnimacion {
+      transform: scale(1.5);
+      margin: -8% 0 6% 0;
+    }
+  }
+}
+
+/*-------------------------------EFECTO GOOGLE MAPS-------------------------------------*/
+
+.contenedorAnimacion {
+  transform: scale(1.9);
+  margin-left: 4%;
+}
+
+.container_1 {
+  position: relative;
+  width: 0;
+  height: 80px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  overflow: hidden;
+  animation: show 2s linear forwards;
+
+  @keyframes show {
+    50%,
+    100% {
+      width: 80px;
+    }
+
+    100% {
+      border-radius: 8px;
+    }
+  }
+}
+
+.piece {
+  position: absolute;
+  width: inherit;
+  height: 150%;
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    top: -100%;
+    left: -100%;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  &:nth-child(1) {
+    background: #f1df50;
+    animation: move_1 0.6s 2s linear forwards;
+
+    @keyframes move_1 {
+      100% {
+        top: -55%;
+        left: -30%;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background: #2aa35b;
+    animation: move_2 0.6s 3s linear forwards;
+
+    @keyframes move_2 {
+      100% {
+        top: -70%;
+        left: -35%;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    height: 100%;
+    left: -100%;
+    bottom: -125%;
+    background: #5d7eeb;
+    transform: rotate(45deg);
+    animation: move_3 0.6s 4s linear forwards;
+
+    @keyframes move_3 {
+      100% {
+        left: -15%;
+        bottom: -65%;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    top: -100%;
+    right: -100%;
+    background: #c0bcb7;
+    transform: rotate(-45deg);
+    animation: move_4 0.6s 4s linear forwards;
+
+    @keyframes move_4 {
+      100% {
+        top: -54%;
+        right: -54%;
+      }
+    }
+  }
+}
+
+.text2 {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 5px solid #fbfbfb;
+  border-right: 5px solid transparent;
+  opacity: 0;
+  z-index: 2;
+  animation: text 0.8s 5.4s linear forwards;
+
+  @keyframes text {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    width: 11px;
+    height: 5px;
+    background: #fbfbfb;
+    top: 40%;
+    right: -25%;
+  }
+
+  &::after {
+    top: -35%;
+    left: -35%;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    border: 5px solid #fbfbfb;
+    border-right: 5px solid transparent;
+    transform: rotate(-50deg);
+    z-index: 1;
+  }
+}
+
+.container_2 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+.map-marker {
+  position: absolute;
+  top: -300%;
+  right: -10%;
+  width: 38.5px;
+  height: 44px;
+  background: #ce4441;
+  border-radius: 100%;
+  opacity: 0;
+  z-index: 2;
+  animation: icon 0.6s 4.8s ease-out forwards;
+
+  @keyframes icon {
+    60% {
+      top: 1%;
+      opacity: 1;
+    }
+
+    80% {
+      top: -13%;
+      opacity: 1;
+    }
+
+    100% {
+      top: -6%;
+      opacity: 1;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    left: 5.5%;
+    bottom: -40%;
+    width: 2px;
+    height: 0px;
+    border-top: 30px solid #ce4441;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+  }
+
+  &::after {
+    top: 28%;
+    left: 28%;
+    width: 18px;
+    height: 18px;
+    background: #791919;
+    border-radius: 50%;
+  }
+}

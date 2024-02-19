@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
+$card-width: 270px;
+$card-height: 500px;
+
+.material-card-hallo {
+    position: relative;
+    height: $card-height;
+    width: $card-width;
+    margin-right: 5px;
+
+    .hallo-mc-content {
+        background-color: black;
+        position: absolute;
+        right: 0;
+        border-radius: 20px;
+        padding-top: 5.6em;
+        top: 0;
+        bottom: 16px;
+        left: 16px;
+
+        .hallo-mc-title {
+            position: absolute;
+            height: fit-content;
+            width: 100%;
+            top: 0px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 2.3rem;
+            font-family: "Jolly Lodger";
+            li {
+                list-style-type: none;
+                background: linear-gradient(to right, rgb(73, 0, 95) 10%,rgb(255, 0, 13) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .hallo-img-container {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 40%;
+            top: 50px;
+
+            img{
+                width: $card-width;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+
+        .hallo-mc-description {
+            position: absolute;
+            right: 20px;
+            left: 20px;
+            top: 35%;
+            padding-top: 5.6em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: white;
+            li {
+                list-style-type: none;
+                text-align: left;
+                margin-top: 6px;  
+            }
+        }
+    }
+
+    .hallo-mc-footer {
+        position: absolute;   
+        cursor: pointer;
+        text-align: center;
+        top: 89%;
+        left: 13%;
+        a {
+            color: white;    
+        }
+    }
+}
+
+
+
+//MAIN HALLOWEEN
+
+.Main-Halloween {
+    background-image: url($server_path+"recursos/halloween/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .row {
+        margin-right: 0;
+    }
+
+    .Titulo-Halloween {
+        position: relative;
+        top: -25%;
+        text-align: left;
+        left: 5%;
+        width: fit-content;
+        font-size: 7rem;
+        line-height: 80px;
+        font-family: "Jolly Lodger";
+        color: rgb(28, 228, 45);
+    
+    }
+    .Subtitulo-Halloween {
+        position: relative;
+        top: -15%;
+        width: 100%;
+        text-align: left;
+        left: 10%;
+        color: white;
+    }
+    .Container-Logo1-Halloween {
+        position: relative;
+        margin-top: 30px;
+        width: 100%;
+        text-align: left;
+        left: 10%;
+    
+        img {
+            margin-top: 10%;
+            margin-bottom: 10%;
+            width: 300px;
+            height: 100px;
+        }
+    }
+    
+    .Container-Logo2-Halloween{
+        position: relative;
+        margin-top: 80px; 
+    
+        img {
+            margin-top: 10%;
+            margin-left: 150px;
+            width: 200px;
+            height: 50px;
+        }
+    }
+    
+    .Telarania-Halloween {
+        position: relative;
+        left: -10%;
+    }
+    
+    .Luna-Halloween{
+        position: relative;
+        padding-top: 100px;
+        text-align: left;
+        margin-left: 10%;
+        
+        img {
+            width: 380px;
+            height:160px;
+        }
+    }
+    
+    .Mitos-Halloween{
+        position: relative;
+        padding-top: 50px;
+        margin-left: 28%;
+    
+        img {
+            width: 150px; 
+            height: 30px;
+        }
+    
+        .Mitos-Halloween-Texto{
+            color: white; 
+            margin-top: 10px; 
+            font-size: 1.5rem; 
+        }
+    }
+    
+    @media screen and (max-width: 900px) {
+        .Titulo-Halloween {
+            font-size: 6.5rem;
+        }
+    
+        .Luna-Halloween{
+            img {
+                width: 300px;
+                height:130px;
+            }
+        }
+        
+        .Mitos-Halloween{
+            img {
+                width: 130px; 
+                height: 25px;
+            }
+        
+            .Mitos-Halloween-Texto{ 
+                font-size: 1.3rem; 
+            }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .Subtitulo-Halloween {
+            text-align: left;
+            left: 0;
+            padding-left: 10%;
+        }
+    
+        .Luna-Halloween{
+            padding-top: 0px;
+            text-align: center;
+            margin-left: 20px;
+            img {
+                width: 300px;
+                height:130px;
+            }
+        }
+        
+        .Mitos-Halloween{
+            text-align: center;
+            margin-left: 0;
+            margin-bottom: 10%;
+            img {
+                width: 130px; 
+                height: 25px;
+            }
+        
+            .Mitos-Halloween-Texto{ 
+                font-size: 1.3rem; 
+            }
+        }
+        
+        .Container-Logo1-Halloween {
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+    
+        .Container-Logo2-Halloween {
+            width: 100%;
+            text-align: center;
+            margin: 0 0 50px 0;
+    
+            img {
+                margin: 0 0 0 0;
+            }
+        }
+    }
+}
+

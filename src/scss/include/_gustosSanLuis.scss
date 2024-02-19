@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.gustos-san-luis{
+    padding-top: 200px;
+    padding-bottom: 50px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 50px;
+   //background-color: aqua;
+}
+
+.img-puntanidad-gastonomica{
+    display: table-cell;
+    padding: 0% 10%;
+    width: 28%;
+    position: absolute;
+}
+
+.img-puntanidad-gastonomica img{
+    vertical-align: top;
+}
+
+.img-title{
+    display: table-cell;
+    padding: 0% 5%;
+}
+
+.intro{
+    width:100%;
+    padding: 0% 5%;
+    margin-bottom: 5%;   
+}
+
+.intro p{
+    font-family: 'Roboto' sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgb(156, 156, 171);
+}
+
+.seccion-title{
+    font-size: 2rem;
+}
+
+.btn-override{
+    color: rgba(114, 39, 137, 1);
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: large;
+}
+
+.btn-override:hover{
+    color: rgba(114, 39, 137, 1);
+    text-decoration: none;
+}
+
+.card-header{
+    background-color: white;
+    border: 1px solid rgb(156, 156, 171); 
+}
+
+.card-header:hover{
+    background-color:rgba(114, 39, 137, 0.3);
+}
+
+#headingOne{
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+#headingTwo{
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+#headingThree{
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+#headingFour{
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+#headingFive{
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+#headingSix{
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.card-body{
+    background-color: white;
+    margin-bottom: 2rem;
+    border: 1px solid rgb(156, 156, 171); 
+    border-radius: 12px;
+}
+
+.card-body:hover{
+    text-decoration: none;
+}
+
+.card-body p{
+    font-family: 'Roboto' sans-serif;
+    color: rgb(156, 156, 171);
+    font-weight: 400;
+    font-size: large;
+}
+
+.card-body{
+    font-family: 'Roboto' sans-serif;
+    color: rgb(156, 156, 171);
+}
+
+.enum{
+    text-indent: 40px;
+}
+
+.gastro-items{
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgb(199 36 36 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+
+    width: 400px;
+    min-width: 400px;
+    height: 400px;
+    min-height: 400px;
+    float: right;
+}
+
+.gastro-items h1{
+    position:absolute;
+    top:50px;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    text-shadow: 0 0 20px rgb(0 0 0 / 40%);
+    line-height: 1;
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.25s ease;
+}
+
+.gastro-container{
+    width:75%;
+    max-width: 1080px;
+    margin: 50px auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    //flex-direction: row;
+}
+
+.imgPresentacion{
+    background-size: cover;
+    background-image: url("https://turismo.sanluis.gov.ar/api-turismo/public/recursos/gastronomia/presentacion.jpeg");
+}
+
+.imgCapacitacion{
+    background-size: cover;
+    background-image: url("https://turismo.sanluis.gov.ar/api-turismo/public/recursos/gastronomia/capacitacion.jpg");
+}
+
+.titleItem{
+    color: white;
+    text-align: center;
+}
+
+.cap{
+    float: right;
+}
+
+.pres{
+    float: left;
+}
+
+.figcaption{
+    //bottom: -26%;
+}
+
+
+//Capacitaciones
+.capacitacion-title{
+    
+}

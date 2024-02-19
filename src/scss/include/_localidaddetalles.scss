@@ -1,0 +1,140 @@
+/*
+    Componente PLocalidad.js
+*/
+
+.ZonaLocalidad-titulo {
+  display: block;
+  width: 100%;
+  top: 10px;
+  height: 50px;
+  position: relative;
+  margin-bottom: 60px;
+  h3 {
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: "Roboto";
+  }
+}
+
+.ZonaLocalidad-Body {
+  display: grid;
+  grid-template-areas: "texto" "atractivos " "mapa" "imperdibles";
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  #video {
+    grid-area: video;
+  }
+  #texto {
+    grid-area: texto;
+    align-self: flex-start;
+    justify-self: center;
+    p {
+      font-style: italic;
+      font-size: 1.3rem;
+    }
+  }
+  #atractivos {
+    grid-area: atractivos;
+    .all-link {
+      cursor: pointer;
+      color: #fff;
+      display: grid;
+      grid-template-areas: "al-nombre al-boton" "al-texto al-boton";
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-rows: auto;
+      padding-left: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      width: fit-content;
+      .al-nombre {
+        grid-area: al-nombre;
+        font-size: 1.4rem;
+      }
+      .al-texto {
+        grid-area: al-texto;
+        font-size: 1.4rem;
+      }
+      .al-boton {
+        grid-area: al-boton;
+        align-self: center;
+        font-size: 2rem;
+        padding-left: 12px;
+      }
+    }
+  }
+  #mapa {
+    grid-area: mapa;
+  }
+  #imperdibles {
+    border-radius: 8px;
+    grid-area: imperdibles;
+    position: relative;
+    background: linear-gradient(
+      to right,
+      #722789 0%,
+      rgba(237, 15, 104, 0.8) 100%
+    );
+    
+    .imp-titulo {
+      border-radius: 8px;
+      position: absolute;
+      margin-top: -20px;
+      padding: 0 20px 0 5px;
+      margin-left: 20px;
+      background-color: #fff;
+      h3 {
+        text-transform: uppercase;
+        color:#722789;
+        font-weight: bold;
+      }
+    }
+    .imp-body-wrap {
+      margin: 40px 20px;
+      
+      //white-space: nowrap;
+      //color: #fff;
+      a {
+        text-decoration: none;
+        color: #fff;
+        .imp-body {
+          // display: -webkit-box;
+          // -webkit-line-clamp: 3;
+          // -webkit-box-orient: vertical;
+          padding: 8px;
+          cursor: pointer;
+          h5 {
+            text-transform: uppercase;
+          }
+          p {
+            //max-height: 145px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            // white-space:nowrap;
+            // width: 1000px;
+            height: 145px;
+
+          }
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .ZonaLocalidad-Body {
+    grid-template-areas: "video" "texto" "atractivos" "mapa" "imperdibles";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /*
+        grid-gap: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        */
+  }
+}
